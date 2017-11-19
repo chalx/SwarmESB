@@ -1,7 +1,7 @@
 /**********************************************************************************************
  * SwarmClient Class: web browser client, using websockets
  **********************************************************************************************/
-var useSocketIo = true;
+var useSocketIo = false;
 
 function SwarmClient(host, port, userId, authToken, tenantId, loginCtor, securityErrorFunction, errorFunction) {
     var self = this;
@@ -19,9 +19,9 @@ function SwarmClient(host, port, userId, authToken, tenantId, loginCtor, securit
     var currentAttemptToReconnect = 0;
     var connectionString;
     if(useSocketIo){
-        connectionString ="http://"+host + ":" + port;
+        connectionString ="ws://"+ host + ":" + port;
     }else{
-        connectionString ="ws://"+host + ":" + port;
+        connectionString ="http://"+ host + ":" + port;
     }
 
     var requestHandleCount = {};
@@ -29,11 +29,11 @@ function SwarmClient(host, port, userId, authToken, tenantId, loginCtor, securit
 
     this.getOutletId = function () {
         return outletId;
-    }
+    };
 
     this.getSessionId = function () {
         return sessionId;
-    }
+    };
 
     createSocket();
 

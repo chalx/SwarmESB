@@ -1,5 +1,2 @@
-#  8000: admin
-#  8080: websockets
-
-docker run -p 8001:8001 -p 8002:-p 8080:8080  --name="SwarmDemo" swarmesb
-
+#!/usr/bin/env bash
+docker run -p 8001:8001 -p 8002:8002 -p 8000:8080  --name="SwarmDemo" swarmesb

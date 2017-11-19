@@ -1,4 +1,5 @@
 #!/bin/bash
+sleep 60
 export NODE_PATH=/SwarmESB/
 export SWARM_NODE_TYPE='demo'
 export SWARM_PATH=/SwarmESB/
