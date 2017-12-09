@@ -1,10 +1,7 @@
-FROM  centos:centos7
+FROM ubuntu:17.10
 COPY . /SwarmESB
 
-RUN yum install -y epel-release
-RUN yum install -y nodejs git redis
+RUN apt-get update
+RUN apt-get install -y nodejs git redis-server npm
 
-RUN cd /SwarmESB && npm dedupe
-RUN npm install http-server -g
-
-CMD ["/bin/bash", "/SwarmESB/docker/start.sh"]
+CMD ["/bin/sh", "/SwarmESB/quickrun.sh"]

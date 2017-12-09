@@ -1,18 +1,15 @@
 version: '3'
 services:
-#  esb:
-#    build: .
-#    ports:
-#      - "8080:8080"
-#      - "8000:8000"
-#    links:
-#      - mysql
-#    depends_on:
-#      - mysql
-  redis:
-    image: redis
-    ports:
-      - "6379:6379"
+  esb:
+   build: .
+   ports:
+     - "8080:8080"
+   links:
+     - mysql
+   depends_on:
+     - mysql
+   volumes:
+     - .:/SwarmESB
   mysql:
     image: mysql
     ports:

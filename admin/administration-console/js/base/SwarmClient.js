@@ -1,7 +1,7 @@
 /**********************************************************************************************
  * SwarmClient Class: web browser client, using websockets
  **********************************************************************************************/
-var useSocketIo = false;
+var useSocketIo = true;
 
 function SwarmClient(host, port, userId, authToken, tenantId, loginCtor, securityErrorFunction, errorFunction) {
     var self = this;

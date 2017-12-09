@@ -8,14 +8,14 @@
      "redisPort":6379,
      "paths":[
         {"core":"etc/coreSwarms"      ,"enabled":true},
-	    {"core":"etc/xSwarms"         ,"enabled":false},
+	  {"core":"etc/xSwarms"         ,"enabled":false},
         {"core":"etc/testSwarms"      ,"enabled":true},
         {"folder":"admin/swarms"      ,"enabled":true},
         {"folder":"swarms"            ,"enabled":true}
      ],
      "checkAccess":false,
      "mysqlConfig":{
-         "host":"localhost",
+         "host":"mysql",
          "port":"3306",
          "user":"root",
          "password":"test",
